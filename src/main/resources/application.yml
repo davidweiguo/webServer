@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: test
+server:
+  compression:
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+websocket:
+  port: 8980
