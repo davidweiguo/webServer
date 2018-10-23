@@ -1,6 +1,21 @@
 spring:
   profiles:
     active: test
+  datasource:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.23.182:3306/LTS_LT_SG_S1?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+    username: tqt001
+    password: tqt001
+    type: com.zaxxer.hikari.HikariDataSource
+    max-idle: 10
+    min-idle: 2
+    max-wait: 100000
+    initial-size: 2
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
 server:
   compression:
     mime-types: application/json,application/xml,text/html,text/xml,text/plain
